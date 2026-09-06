@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-paper text-charcoal font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid #C6A15B;
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: #C6A15B;
+    color: #1A1F1C;
+  }
+}
+
+@layer utilities {
+  .rise-in {
+    opacity: 0;
+    animation: rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .container-shop {
+    @apply mx-auto max-w-6xl px-6 md:px-10;
+  }
+
+  .plate-number {
+    @apply font-display text-sm tracking-tight text-brass;
+  }
+}
