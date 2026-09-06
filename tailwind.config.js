@@ -36,20 +36,6 @@ module.exports = {
       maxWidth: {
         prose: "72ch",
       },
-      keyframes: {
-        "rise-in": {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "gauge-sweep": {
-          "0%": { transform: "rotate(-90deg)" },
-          "100%": { transform: "rotate(var(--sweep-end, 45deg))" },
-        },
-      },
-      animation: {
-        "rise-in": "rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "gauge-sweep": "gauge-sweep 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-      },
     },
   },
   plugins: [],
